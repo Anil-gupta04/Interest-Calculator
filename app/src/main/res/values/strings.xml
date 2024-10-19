@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CompoundInterestCalculator</string>
+    <string-array name="interest_frequencies">
+        <item>Yearly</item>
+        <item>Monthly</item>
+    </string-array>
+</resources>
