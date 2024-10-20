@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
-    android:background="#EFECE8">
+    android:padding="16dp"
+    android:background="#EFECE8"
+    tools:ignore="ExtraText">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="संयुक्त व्याज गणक"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="संयुक्त व्याज गणक"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Principal Amount Input -->
     <EditText
         android:id="@+id/editTextPrincipal"
         android:layout_width="match_parent"
@@ -24,6 +34,7 @@
         android:minHeight="48dp"
         android:inputType="numberDecimal" />
 
+    <!-- Rate of Interest Input -->
     <EditText
         android:id="@+id/editTextRate"
         android:layout_width="match_parent"
@@ -33,6 +44,7 @@
         android:minHeight="48dp"
         android:inputType="numberDecimal" />
 
+    <!-- Interest Frequency Selection -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,38 +55,69 @@
         android:layout_width="match_parent"
         android:layout_height="48dp" />
 
+    <!-- Start Date Selection -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Initial Date:" />
+        android:text="Select Start Date:" />
 
-    <Button
-        android:id="@+id/buttonSelectStartDate"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Start Date" />
+        android:orientation="horizontal">
 
+        <Spinner
+            android:id="@+id/spinnerStartDay"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinnerStartMonth"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinnerStartYear"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- End Date Selection -->
     <TextView
-        android:id="@+id/textViewStartDate"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="48dp"
+        android:text="Select End Date:"
+        android:layout_marginTop="16dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ending Date:" />
-
-    <Button
-        android:id="@+id/buttonSelectEndDate"
+    <!-- Horizontal Layout for End Date Spinners -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select End Date" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textViewEndDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spinnerEndDay"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
+        <Spinner
+            android:id="@+id/spinnerEndMonth"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinnerEndYear"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Buttons for Calculate and Clear -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -96,6 +139,7 @@
             android:text="Clear" />
     </LinearLayout>
 
+    <!-- Result Section -->
     <TextView
         android:id="@+id/textViewResult"
         android:layout_width="wrap_content"
@@ -110,3 +154,8 @@
         android:layout_marginTop="8dp"
         android:textSize="18sp" />
 </LinearLayout>
+
+
+
+
+

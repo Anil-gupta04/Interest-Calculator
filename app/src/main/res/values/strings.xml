@@ -4,4 +4,8 @@
         <item>Yearly</item>
         <item>Monthly</item>
     </string-array>
+    <string-array name="calendar_types">
+        <item>AD</item>
+        <item>BS</item>
+    </string-array>
 </resources>
