@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void clearFields() {
         new AlertDialog.Builder(this)
-                .setTitle("Clear Fields")
+                .setTitle("Clear")
                 .setMessage("Are you sure you want to clear all fields?")
                 .setPositiveButton("Yes", (dialog, which) -> {
                     editTextPrincipal.setText("");

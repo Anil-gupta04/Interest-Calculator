@@ -8,4 +8,6 @@
         <item>AD</item>
         <item>BS</item>
     </string-array>
+    <string name="calculate">गणना गर्नुहोस्</string>
+    <string name="clear">मेटाउनुहोस्</string>
 </resources>
